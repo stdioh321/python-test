@@ -11,6 +11,13 @@ def ok():
   resp.headers["X-Custom-Header"] = "Custom value"
   return resp
 
+@app.route('/ok-empty', methods=['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+def ok_empty():
+  resp = make_response()
+  resp.headers['Content-Type'] = 'application/json'
+  resp.headers["X-Custom-Header"] = "Custom value"
+  return resp
+
 
 @app.route('/not-ok', methods=['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
 def not_ok():
