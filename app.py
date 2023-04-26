@@ -65,4 +65,4 @@ def ok_string():
 
 
 if __name__ == '__main__':
-    app.run(port=PORT)
+    app.run(port=PORT,host=0.0.0.0)
